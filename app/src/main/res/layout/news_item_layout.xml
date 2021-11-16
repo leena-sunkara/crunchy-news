@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    style="@style/match_wrap_parent"
+    android:layout_margin="10dp"
+    android:background="@color/black"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="@dimen/cardview_default_elevation">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        style="@style/match_wrap_parent"
+        android:background="@color/green">
+
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/newsTitle"
+            style="@style/news_content"
+            android:layout_below="@+id/newsImage"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/news_title"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/newsAuthor"
+            style="@style/news_content"
+            android:layout_below="@id/newsTitle"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/news_author"
+            android:textColor="@color/gold"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/newsDescription"
+            style="@style/news_content"
+            android:layout_below="@id/newsAuthor"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/news_description"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
