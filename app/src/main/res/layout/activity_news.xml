@@ -5,6 +5,13 @@
     android:orientation="vertical"
     tools:context=".view.NewsActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         style="@style/match_wrap_parent" />

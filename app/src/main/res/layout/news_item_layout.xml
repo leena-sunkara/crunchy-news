@@ -10,42 +10,49 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        style="@style/match_wrap_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/green">
 
         <ImageView
             android:id="@+id/newsImage"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
             android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/newsTitle"
             style="@style/news_content"
-            android:layout_below="@+id/newsImage"
+            android:layout_toEndOf="@+id/newsImage"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="@string/news_title"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/newsAuthor"
             style="@style/news_content"
             android:layout_below="@id/newsTitle"
+            android:layout_toEndOf="@+id/newsImage"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="@string/news_author"
             android:textColor="@color/gold"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/newsDescription"
             style="@style/news_content"
             android:layout_below="@id/newsAuthor"
+            android:layout_toEndOf="@+id/newsImage"
+            android:ellipsize="end"
             android:fontFamily="sans-serif-condensed"
+            android:maxLines="3"
             android:text="@string/news_description"
             android:textColor="@color/white"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
